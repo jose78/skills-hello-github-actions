@@ -1,0 +1,21 @@
+---
+name: Post wellcome comment
+on:
+  pull_request:
+     types: [opened]
+
+
+permissions:
+  pull-requests: write
+
+jobs:
+  welcome:
+    name: Post welcome
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          gh pr comment "SPR_URL" --body "welcome to the repository!"
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GIHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}          
+         
