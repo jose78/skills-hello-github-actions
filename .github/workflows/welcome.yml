@@ -6,4 +6,4 @@ on:
 
 
 permissions:
-  pull-request: write
+  pull-requests: write
