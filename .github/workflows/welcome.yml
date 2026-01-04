@@ -11,4 +11,4 @@ permissions:
 jobs:
   welcome:
     name: Post welcome
-    runs-on: ubuntu-last
+    runs-on: ubuntu-latest
