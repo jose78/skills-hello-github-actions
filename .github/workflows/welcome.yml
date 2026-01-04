@@ -7,3 +7,8 @@ on:
 
 permissions:
   pull-requests: write
+
+jobs:
+  welcome:
+    name: Post welcome
+    runs-on: ubuntu-last
